@@ -59,6 +59,10 @@ public class Login_stepDefination {
 
     @Then("user should see validation message  {string}")
     public void user_should_see_validation_message(String validationMesssage) {
+        System.out.println(loginPage.username.getText());
+        System.out.println(loginPage.password.getText());
+
+
         if (loginPage.username.getText().isEmpty()) {
             Assert.assertEquals(loginPage.username.getAttribute("validationMessage"), validationMesssage);
 

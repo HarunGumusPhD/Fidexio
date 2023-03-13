@@ -37,6 +37,7 @@ Feature: Login Functionality
 
 
 #Test Case 3
+  @wip
   Scenario Outline: User should see validation message when using empty credentials
     When User enters email "<username>" in username area
     And User enters password "<password>" password area
