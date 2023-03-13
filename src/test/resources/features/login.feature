@@ -4,30 +4,61 @@ Feature: Login Functionality
   Background: Login page
     Given User is on the login page
 
+
+
   #Test Case 1
-  Scenario Outline: Login with valid credentials
-    When User enters valid email "<email>"
-    And User enters valid password "<password>"
+  Scenario Outline: User should Login with valid credentials
+    When User enters email "<username>" in username area
+    And User enters password "<password>" password area
     And User clicks login button
     Then User should be on the homepage
 
-    Examples: Email and Password
-      | email                   | password     |
+    Examples: username and Password
+      | username                | password     |
       | salesmanager6@info.com  | salesmanager |
       | salesmanager99@info.com | salesmanager |
       | posmanager33@info.com   | posmanager   |
       | posmanager105@info.com  | posmanager   |
 
+
   #Test Case 2
-  Scenario Outline: Login with invalid credentials
-    When User enters invalid email "<email>"
-    And User enters invalid password "<password>"
+  Scenario Outline: User can not login with invalid credentials
+    When User enters email "<username>" in username area
+    And User enters password "<password>" password area
     And User clicks login button
-    Then User should see the error message
+    Then User should see the error message "Wrong login/password"
 
     Examples: Email and Password
-      | email                    | password     |
-      | salesmanageE46@info.com   | salesmanager |
+      | username                        | password     |
+      | salesmanageE46@info.com  | salesmanager |
       | salesmanager100@info.com | salesmanagEC |
       | posmanager1@info.com     | posmanager   |
       | posmanager100@info.com   | WEWQDQ32S    |
+
+    @wip
+#Test Case 3
+  Scenario Outline: User should see validation message when using empty credentials
+    When User enters email "<username>" in username area
+    And User enters password "<password>" password area
+    And User clicks login button
+    Then user should see validation message  "Please fill out this field."
+    Examples: Email and Password
+      | username                | password     |
+      | salesmanager98@info.com |              |
+      |                         | salesmanager |
+      |                         |              |
+
+  #Test Case 4
+
+  Scenario Outline: User should see the bullet signs when type the password
+    When user enter password "salesmanager" in password area
+    Then  user should see bullet sign
+
+
+  #Test Case 5
+  Scenario Outline:
+    When Verify "Enter" key is working on keyboard like Login Button funciaonality
+    And User enters email "<username>" in username area
+    And User enters password "<password>" password area
+    And User clicks enter ker on kerboard
+    Then user should login User Page
