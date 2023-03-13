@@ -15,6 +15,8 @@ public class Login_stepDefination {
     LoginPage loginPage = new LoginPage();
     UserPage UserPage = new UserPage();
 
+    String memorizedUserName, memorisedPassword;
+
     String currentUsername, currentPassword;
 
     @Given("User is on the login page")
@@ -26,6 +28,7 @@ public class Login_stepDefination {
     @When("User enters email {string} in username area")
     public void user_enters_email_in_username_area(String username) {
         loginPage.username.sendKeys(username);
+        memorizedUserName= username;
 
 
     }
@@ -33,6 +36,7 @@ public class Login_stepDefination {
     @When("User enters password {string} password area")
     public void user_enters_password_password_area(String password) {
         loginPage.password.sendKeys(password);
+        memorisedPassword = password;
 
 
     }
@@ -59,14 +63,14 @@ public class Login_stepDefination {
 
     @Then("user should see validation message  {string}")
     public void user_should_see_validation_message(String validationMesssage) {
-        System.out.println(loginPage.username.getText());
-        System.out.println(loginPage.password.getText());
+        System.out.println(memorisedPassword);
+        System.out.println(memorizedUserName);
 
 
-        if (loginPage.username.getText().isEmpty()) {
+        if (memorizedUserName.isEmpty()) {
             Assert.assertEquals(loginPage.username.getAttribute("validationMessage"), validationMesssage);
 
-        } else if (loginPage.password.getText().isEmpty()) {
+        } else if (memorisedPassword.isEmpty()) {
             Assert.assertEquals(loginPage.password.getAttribute("validationMessage"), validationMesssage);
 
         }
