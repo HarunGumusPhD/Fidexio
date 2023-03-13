@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class Login_stepDefination {
 
@@ -65,6 +66,25 @@ public class Login_stepDefination {
             Assert.assertEquals(loginPage.password.getAttribute("validationMessage"), validationMesssage);
 
         }
+
+    }
+
+
+    @Then("user should see bullet sign")
+    public void user_should_see_bullet_sign() {
+        Assert.assertEquals("password", loginPage.password.getAttribute("type"));
+
+    }
+
+    @When("User clicks enter key on keyboard")
+    public void user_clicks_enter_key_on_keyboard() {
+        loginPage.password.sendKeys(Keys.ENTER);
+    }
+
+
+    @Then("user should login User Page")
+    public void user_should_login_user_page() {
+
 
     }
 

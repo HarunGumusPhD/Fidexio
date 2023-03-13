@@ -35,7 +35,7 @@ Feature: Login Functionality
       | posmanager1@info.com     | posmanager   |
       | posmanager100@info.com   | WEWQDQ32S    |
 
-    @wip
+
 #Test Case 3
   Scenario Outline: User should see validation message when using empty credentials
     When User enters email "<username>" in username area
@@ -51,14 +51,17 @@ Feature: Login Functionality
   #Test Case 4
 
   Scenario Outline: User should see the bullet signs when type the password
-    When user enter password "salesmanager" in password area
+    When User enters password "aacew4eg" password area
     Then  user should see bullet sign
 
 
   #Test Case 5
-  Scenario Outline:
-    When Verify "Enter" key is working on keyboard like Login Button funciaonality
-    And User enters email "<username>" in username area
+  Scenario Outline:Verify "Enter" key is working on keyboard like Login Button funciaonality
+    When User enters email "<username>" in username area
     And User enters password "<password>" password area
-    And User clicks enter ker on kerboard
+    And User clicks enter key on keyboard
     Then user should login User Page
+    Examples: username and Password
+      | username               | password     |
+      | salesmanager6@info.com | salesmanager |
+      | posmanager33@info.com  | posmanager   |
