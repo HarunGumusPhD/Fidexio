@@ -6,7 +6,7 @@ Feature: Login Functionality
 
 
 
-  #Test Case 1
+  #@Test Case 1
   Scenario Outline: User should Login with valid credentials
     When User enters email "<username>" in username area
     And User enters password "<password>" password area
@@ -37,7 +37,7 @@ Feature: Login Functionality
 
 
 #Test Case 3
-  @wip
+
   Scenario Outline: User should see validation message when using empty credentials
     When User enters email "<username>" in username area
     And User enters password "<password>" password area
