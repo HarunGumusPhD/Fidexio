@@ -5,7 +5,7 @@ Feature: Login Functionality
     Given User is on the login page
 
 
-
+  @FIDEX10-453
   #@Test Case 1
   Scenario Outline: User should Login with valid credentials
     When User enters email "<username>" in username area
@@ -20,7 +20,7 @@ Feature: Login Functionality
       | posmanager33@info.com   | posmanager   |
       | posmanager105@info.com  | posmanager   |
 
-
+  @FIDEX10-454
   #Test Case 2
   Scenario Outline: User can not login with invalid credentials
     When User enters email "<username>" in username area
@@ -37,7 +37,7 @@ Feature: Login Functionality
 
 
 #Test Case 3
-
+  @FIDEX10-455
   Scenario Outline: User should see validation message when using empty credentials
     When User enters email "<username>" in username area
     And User enters password "<password>" password area
@@ -48,7 +48,7 @@ Feature: Login Functionality
       | salesmanager98@info.com |              |
       |                         | salesmanager |
       |                         |              |
-
+  @FIDEX10-458
   Scenario Outline: Verify User land on the ‘reset password’ page after clicking on the "Reset password" link
     When User enters email "<username>" in username area
     And User enters password "<password>" password area
@@ -62,12 +62,12 @@ Feature: Login Functionality
 
 
   #Test Case 4
-
+  @FIDEX10-456
   Scenario Outline: User should see the bullet signs when type the password
     When User enters password "aacew4eg" password area
     Then  user should see bullet sign
 
-
+  @FIDEX10-457
   #Test Case 5
   Scenario Outline:Verify "Enter" key is working on keyboard like Login Button funciaonality
     When User enters email "<username>" in username area
