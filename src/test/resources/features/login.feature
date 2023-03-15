@@ -48,7 +48,7 @@ Feature: Login Functionality
       | salesmanager98@info.com |              |
       |                         | salesmanager |
       |                         |              |
-@wip
+
   Scenario Outline: Verify User land on the ‘reset password’ page after clicking on the "Reset password" link
     When User enters email "<username>" in username area
     And User enters password "<password>" password area
