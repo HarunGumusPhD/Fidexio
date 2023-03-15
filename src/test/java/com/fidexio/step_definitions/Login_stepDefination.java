@@ -28,7 +28,7 @@ public class Login_stepDefination {
     @When("User enters email {string} in username area")
     public void user_enters_email_in_username_area(String username) {
         loginPage.username.sendKeys(username);
-        memorizedUserName= username;
+        memorizedUserName = username;
 
 
     }
@@ -94,6 +94,11 @@ public class Login_stepDefination {
     public void user_should_login_user_page() {
 
 
+    }
+
+    @Then("User should see the {string} link")
+    public void user_should_see_the_link(String loginPassword) {
+        loginPage.resetPassword.click();
     }
 
 

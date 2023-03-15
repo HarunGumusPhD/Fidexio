@@ -29,7 +29,7 @@ Feature: Login Functionality
     Then User should see the error message "Wrong login/password"
 
     Examples: Email and Password
-      | username                        | password     |
+      | username                 | password     |
       | salesmanageE46@info.com  | salesmanager |
       | salesmanager100@info.com | salesmanagEC |
       | posmanager1@info.com     | posmanager   |
@@ -48,6 +48,18 @@ Feature: Login Functionality
       | salesmanager98@info.com |              |
       |                         | salesmanager |
       |                         |              |
+@wip
+  Scenario Outline: Verify User land on the ‘reset password’ page after clicking on the "Reset password" link
+    When User enters email "<username>" in username area
+    And User enters password "<password>" password area
+    And User clicks login button
+    Then User should see the "Reset password" link
+
+    Examples: Email and Password
+      | username                | password     |
+      | salesmanageE46@info.com | salesmanager |
+
+
 
   #Test Case 4
 

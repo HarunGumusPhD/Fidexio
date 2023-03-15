@@ -23,5 +23,7 @@ public class LoginPage {
     @FindBy(xpath = "//p[@class='alert alert-danger']")
     public WebElement wrongCredentialsMsg;
 
+    @FindBy(xpath = "//button[@type='reset password']")
+    public WebElement resetPassword;
 
 }
