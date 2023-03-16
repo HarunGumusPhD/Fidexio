@@ -14,5 +14,14 @@ public class UserPage {
     @FindBy (xpath = "//li[.='#Inbox']")
     public WebElement UserOnPage;
 
+@FindBy (xpath=" //span[@class='oe_topbar_name']")
+public WebElement TopRightUserName;
+
+
+@FindBy (xpath= "//a[@data-menu='logout']")
+    public WebElement TopRightMenuLogOutLink;
+
+@FindBy (xpath ="//div[@class='o_dialog_warning modal-body']")
+public WebElement SessionExpiredMessage;
 
 }
