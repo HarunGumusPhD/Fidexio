@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         glue = "com/fidexio/step_definitions",
         dryRun = false,
         publish = true,
-        tags = "@harun"
+        tags = "@smoke"
 )
 public class CukesRunner {
 }
