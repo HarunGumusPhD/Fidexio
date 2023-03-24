@@ -1,4 +1,4 @@
- @smo @FIDEX10-477
+ @harun @FIDEX10-477
 Feature: Logout Functionality
 
   Background: User on the User Page

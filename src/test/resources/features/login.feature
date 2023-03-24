@@ -1,4 +1,4 @@
-@smo
+@harun
 Feature: Login Functionality
 
   Background: Login page
@@ -57,7 +57,7 @@ Feature: Login Functionality
 
 
  @FIDEX10-456
-  Scenario Outline: User should see the bullet signs when type the password
+  Scenario: User should see the bullet signs when type the password
     When User enters password "aacew4eg" password area
     Then  user should see bullet sign
 
