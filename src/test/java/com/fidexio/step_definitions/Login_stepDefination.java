@@ -17,7 +17,6 @@ public class Login_stepDefination {
 
     String memorizedUserName, memorisedPassword;
 
-    String currentUsername, currentPassword;
 
     @Given("User is on the login page")
     public void user_is_on_the_login_page() {
